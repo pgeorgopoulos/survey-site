@@ -21,8 +21,8 @@ resource "azurerm_container_registry" "acr" {
 
 resource "azurerm_kubernetes_cluster" "kube_clust" {
   name                = var.kube_clust_name
-  location            = azurerm_resource_group.example.location
-  resource_group_name = azurerm_resource_group.example.name
+  location            = azurerm_resource_group.rg.location
+  resource_group_name = azurerm_resource_group.rg.name
   dns_prefix          = var.kube_clust_name
 
   default_node_pool {
