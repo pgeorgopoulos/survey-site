@@ -36,6 +36,12 @@ resource "azurerm_kubernetes_cluster" "kube_clust" {
     client_secret = var.app_secret
   }
 
+  addon_profile {
+      http_application_routing {
+          enabled = true
+        }
+  }
+
   tags = {
     purpose = "limesurvey"
   }
