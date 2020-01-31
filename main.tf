@@ -37,6 +37,6 @@ resource "azurerm_kubernetes_cluster" "kube_clust" {
   }
 
   tags = {
-    Environment = "limesurvey"
+    purpose = "limesurvey"
   }
 }
